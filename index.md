@@ -3,4 +3,4 @@ permalink: /
 redirect_to:
   - /wow
 ---
-Hi
+Hi ja
