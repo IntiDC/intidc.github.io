@@ -1,6 +1,6 @@
 ---
 permalink: /
 redirect_to:
-  - http://www.google.com
+  - http://www.inti.io
 ---
 Hi ja
