@@ -1,6 +1,6 @@
 ---
 permalink: /
 redirect_to:
-  - /wow
+  - http://www.google.com
 ---
 Hi ja
