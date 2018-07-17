@@ -1,6 +1,6 @@
 ---
 permalink: /
 redirect_to:
-  - https://www.inti.io
+  - https://stalkscan.com/github
 ---
 Hi ja
