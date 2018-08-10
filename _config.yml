@@ -1,5 +1,2 @@
 plugins:
-  - jekyll-redirect-from
   - jekyll-feed
-feed:
-  path: atom.xml
