@@ -1,4 +1,4 @@
 plugins:
   - jekyll-feed
 feed:
-  path: "../../atomic.xml"
+  path: "atomic.xml"
