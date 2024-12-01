@@ -1,6 +1,0 @@
-plugins:
-  - jekyll-feed
-feed:
-  path: "atomic.xml"
-
-theme: jekyll-theme-leap-day
