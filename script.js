@@ -19,7 +19,9 @@ function loadFaceApiScript() {
     });
 }
 
+
 uploadInput.addEventListener('change', (event) => {
+    labeledDescriptors = [];
     uploadedImages = Array.from(event.target.files);
     imageContainer.innerHTML = '';
     document.getElementById("choose-pictures").classList.add("loading");
