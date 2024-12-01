@@ -78,6 +78,53 @@ button {
     background: linear-gradient(0deg, rgba(151, 210, 255, 1) 0%, rgba(169, 245, 255, 1) 100%);
 }
 
+button.loading {
+    background: rgb(177, 179, 181);
+    background: linear-gradient(0deg, rgb(192, 195, 198) 0%, rgb(233, 233, 233) 100%) !important;
+    pointer-events: none;
+}
+
+.loading-text {
+    display: none;
+}
+
+button.loading .active-text {
+    display: none;
+}
+
+button.loading .loading-text {
+    display: block;
+}
+
+.loader {
+    width: 15px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    animation: l5 1s infinite linear alternate;
+}
+
+@keyframes l5 {
+    0% {
+        box-shadow: 20px 0 #000, -20px 0 #0002;
+        background: #000
+    }
+
+    33% {
+        box-shadow: 20px 0 #000, -20px 0 #0002;
+        background: #0002
+    }
+
+    66% {
+        box-shadow: 20px 0 #0002, -20px 0 #000;
+        background: #0002
+    }
+
+    100% {
+        box-shadow: 20px 0 #0002, -20px 0 #000;
+        background: #000
+    }
+}
+
 button:hover {
     background: rgb(151, 210, 255);
     background: linear-gradient(0deg, rgba(169, 245, 255, 1) 0%, rgba(151, 210, 255, 1) 100%);

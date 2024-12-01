@@ -22,6 +22,7 @@ function loadFaceApiScript() {
 uploadInput.addEventListener('change', (event) => {
     uploadedImages = Array.from(event.target.files);
     imageContainer.innerHTML = '';
+    document.getElementById("choose-pictures").classList.add("loading");
     document.getElementById("progress-container").style.display = "block";
     document.getElementById("data-disclaimer").style.display = "none";
     progressBar.style.width = '0%';
@@ -46,6 +47,7 @@ uploadInput.addEventListener('change', (event) => {
         .catch((err) => {
             progressText.innerText = `Error: ${err.message}`;
             console.error('Error loading face-api.js or models:', err);
+            document.getElementById("choose-pictures").classList.remove("loading");
         });
 });
 
@@ -124,6 +126,9 @@ async function initScan() {
     progressText.innerText = matches.length
         ? `Status: Scanning complete. ${matches.length} potential matches found, please review them manually and contact +32 478 697 100 on WhatsApp if you think you have found a match.`
         : `Status: Scanning complete. No matches found.`;
+
+
+    document.getElementById("choose-pictures").classList.remove("loading");
 }
 
 
