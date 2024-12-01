@@ -157,30 +157,32 @@ async function scanImage(image, matches, faceMatcher) {
             matches.push(bestMatch.label);
             const box = detection.detection.box;
             ctx.lineWidth = 4;
-            ctx.strokeRect(box.x, box.y, box.width, box.height);
-            ctx.font = '20px Arial';
+            ctx.font = '30px Arial';
             if (bestMatch._distance < 0.25) {
                 ctx.fillStyle = 'green';
                 ctx.strokeStyle = 'green';
+                ctx.strokeRect(box.x, box.y, box.width, box.height);
                 ctx.fillText("Looks like Dries!", box.x, box.y - 10);
             }
             else if (bestMatch._distance < 0.50) {
                 ctx.fillStyle = 'yellow';
                 ctx.strokeStyle = 'yellow';
+                ctx.strokeRect(box.x, box.y, box.width, box.height);
                 ctx.fillText("Could be Dries", box.x, box.y - 10);
 
             }
             else if (bestMatch._distance < 0.75) {
                 ctx.fillStyle = 'orange';
                 ctx.strokeStyle = 'orange';
+                ctx.strokeRect(box.x, box.y, box.width, box.height);
                 ctx.fillText("Possibly Dries", box.x, box.y - 10);
 
             }
             else if (bestMatch._distance < 100) {
                 ctx.fillStyle = 'red';
                 ctx.strokeStyle = 'red';
+                ctx.strokeRect(box.x, box.y, box.width, box.height);
                 ctx.fillText("Could be Dries", box.x, box.y - 10);
-                ctx.fillText(bestMatch.toString(), box.x, box.y - 10);
             }
             matchFound = true;
         }
