@@ -5,8 +5,8 @@ const scanButton = document.getElementById('scan-btn');
 const imageContainer = document.getElementById('image-container');
 
 const referenceImageURLs = ['./dries1.jpg', './dries2.jpg', './dries3.jpg'];
-const labeledDescriptors = [];
-let uploadedImages = [];
+var labeledDescriptors = [];
+var uploadedImages = [];
 
 function loadFaceApiScript() {
     return new Promise((resolve, reject) => {
