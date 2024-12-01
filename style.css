@@ -101,6 +101,7 @@ button.loading .loading-text {
     aspect-ratio: 1;
     border-radius: 50%;
     animation: l5 1s infinite linear alternate;
+
 }
 
 @keyframes l5 {
